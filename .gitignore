@@ -1,0 +1,6 @@
+deploy_env/
+__pycache__/
+*.pkl
+*.pyc
+Pipfile
+Pipfile.lock
