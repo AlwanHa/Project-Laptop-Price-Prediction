@@ -253,7 +253,7 @@ def main():
     st.markdown("---")
     st.markdown("""
         <div style="text-align: center; color: #7f8c8d; padding: 1rem;">
-            <p>Buatan AQ</p>
+            <p>ML Kelompok 3</p>
         </div>
     """, unsafe_allow_html=True)
 
