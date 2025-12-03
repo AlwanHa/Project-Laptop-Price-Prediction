@@ -181,7 +181,7 @@ def run_ml_app():
             Company = st.selectbox(
                 "Company",
                 options=company_options,
-                index=company_options.index("asus")   # default
+                index=company_options.index("asus") 
             )
 
         with col2:
@@ -191,7 +191,7 @@ def run_ml_app():
             TypeName = st.selectbox(
                 "Type Name",
                 options=typename_options,
-                index=typename_options.index("notebook")   # default
+                index=typename_options.index("notebook")  
             )
 
 
@@ -205,7 +205,7 @@ def run_ml_app():
         with col2:
             ScreenResolution = st.text_input(
                 "Screen Resolution", 
-                placeholder= "Contoh: 4K Ultra HD 3840x2160")
+                placeholder= "Contoh: 3840x2160")
 
 
         # ⚙ Processor
@@ -221,7 +221,7 @@ def run_ml_app():
 
         with col2:
             CPU_Type = st.text_input(
-                "CPU Type", placeholder = " Contoh: Core i5 7200U")
+                "CPU Type", placeholder = "Contoh: Core i5")
 
         with col3:
             CPU_Frequency = st.number_input("CPU Frequency (GHz)", 0.5, 5.0, 2.5)
@@ -248,7 +248,7 @@ def run_ml_app():
             GPU_Company = st.selectbox(
                 "GPU Company",
                 options=gpu_company_options,
-                index=gpu_company_options.index("intel")   # default
+                index=gpu_company_options.index("intel")  
             )
 
         with col2:
@@ -262,7 +262,7 @@ def run_ml_app():
             OpSys = st.selectbox(
                 "Operating System",
                 options=opsys_options,
-                index=opsys_options.index("windows 10")   # default
+                index=opsys_options.index("windows 10") 
             )
 
         # Last field: Weight
