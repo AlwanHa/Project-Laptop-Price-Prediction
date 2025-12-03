@@ -168,6 +168,11 @@ def run_ml_app():
             'macos', 'no os', 'windows 10', 'mac os x', 'linux', 'android',
             'windows 10 s', 'chrome os', 'windows 7'
         ]
+
+        cpu_company_options = [
+            'intel', 'amd', 'samsung'
+        ]
+
         # 🏢 Basic Information
         st.subheader("🏢 Basic Information")
         col1, col2, col3 = st.columns(3)
@@ -198,7 +203,9 @@ def run_ml_app():
             Inches = st.number_input("Screen Size (Inches)", 10.0, 20.0, 15.6)
 
         with col2:
-            ScreenResolution = st.text_input("Screen Resolution", "1920x1080")
+            ScreenResolution = st.text_input(
+                "Screen Resolution", 
+                placeholder= "Contoh: 4K Ultra HD 3840x2160")
 
 
         # ⚙ Processor
@@ -206,10 +213,15 @@ def run_ml_app():
         col1, col2, col3 = st.columns(3)
 
         with col1:
-            CPU_Company = st.text_input("CPU Company", "Intel")
+            CPU_Company = st.selectbox(
+                "CPU Company",
+                options=cpu_company_options,
+                index=cpu_company_options.index("intel") 
+            )
 
         with col2:
-            CPU_Type = st.text_input("CPU Type", "Core i5 7200U")
+            CPU_Type = st.text_input(
+                "CPU Type", placeholder = " Contoh: Core i5 7200U")
 
         with col3:
             CPU_Frequency = st.number_input("CPU Frequency (GHz)", 0.5, 5.0, 2.5)
@@ -223,7 +235,9 @@ def run_ml_app():
             RAM = st.number_input("RAM (GB)", 2, 128, 8)
 
         with col2:
-            Memory = st.text_input("Storage Configuration", "256GB SSD")
+            Memory = st.text_input(
+                "Storage Configuration", 
+                placeholder = " Contoh: 256GB SSD")
 
 
         # 🎮 Graphics & System
@@ -231,7 +245,11 @@ def run_ml_app():
         col1, col2, col3 = st.columns(3)
 
         with col1:
-            GPU_Company = st.text_input("GPU Company", "Intel")
+            GPU_Company = st.selectbox(
+                "GPU Company",
+                options=gpu_company_options,
+                index=gpu_company_options.index("intel")   # default
+            )
 
         with col2:
             GPU_Type = st.selectbox(
