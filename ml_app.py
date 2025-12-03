@@ -185,7 +185,8 @@ def run_ml_app():
             )
 
         with col2:
-            Product = st.text_input("Product", "Inspiron 15")
+            Product = st.text_input("Product", 
+                                    placeholder= "Contoh: MacBook Pro, Aspire 5 dll.")
 
         with col3:    
             TypeName = st.selectbox(
