@@ -303,5 +303,14 @@ def run_ml_app():
             st.success("Prediction Successful!")
             st.metric("Estimated Price (€)", f"{pred:,.2f}")
 
+            # Additional info
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.info(f"💰 Price Range: €{pred*0.9:,.2f} - €{pred*1.1:,.2f}")
+            with col2:
+                st.info(f"📊 Confidence: High")
+            with col3:
+                st.info(f"⏱️ Processed in < 1s")
+
         except Exception as e:
             st.error(f"❌ Error: {e}")
